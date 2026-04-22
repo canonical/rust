@@ -5,7 +5,7 @@ runners:
     env: { }
 
   - &job-linux-4c
-    os: ubuntu-24.04
+    os: self-hosted-linux-amd64-resolute-large
     # Free some disk space to avoid running out of space during the build.
     free_disk: true
     <<: *base-job
