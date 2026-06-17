@@ -52,6 +52,10 @@ runners:
     os: ubuntu-24.04-arm64-8core-32gb
     <<: *base-job
 
+  - &job-s390x-linux
+    os: self-hosted-linux-s390x-resolute-medium-rust
+    <<: *base-job
+
   # Codebuild runners are provisioned in
   # https://github.com/rust-lang/simpleinfra/blob/b7ddd5e6bec8a93ec30510cdddec02c5666fefe9/terragrunt/accounts/ci-prod/ci-runners/terragrunt.hcl#L2
   - &job-linux-36c-codebuild
@@ -156,7 +160,9 @@ pr:
     env:
       CODEGEN_BACKENDS: gcc
     <<: *job-linux-4c
-  
+  - name: s390x-linux
+    <<: *job-s390x-linux
+
   # This job tests features we want to stabilize soon, to ensure they don't
   # regress.
   - name: x86_64-gnu-pre-stabilization

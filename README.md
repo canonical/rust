@@ -6,7 +6,7 @@
          src="https://raw.githubusercontent.com/rust-lang/www.rust-lang.org/master/static/images/rust-social-wide-light.svg"
          width="50%">
   </picture>
-
+     
 [Website][Rust] | [Getting started] | [Learn] | [Documentation] | [Contributing]
 </div>
 
